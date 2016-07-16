@@ -16,14 +16,12 @@ const fetch = function (url, options) {
         gzipRequest: true
     };
 
-    console.log(params);
     return NativeSimpleFetch.sendRequest(params).then((res)=> {
-        console.log(res);
-        const statusCode = parseInt(res[0]);
+        const status = parseInt(res[0]);
         const body = res[1];
         return {
             ok: statusCode >= 200 && statusCode <= 300,
-            status: statusCode,
+            status: status,
             json: ()=> {
                 return new Promise((resolve, reject)=> {
                     try {
@@ -40,9 +38,6 @@ const fetch = function (url, options) {
                 });
             }
         };
-    }, (err)=> {
-        console.log(err);
-        return err;
     });
 };
 
