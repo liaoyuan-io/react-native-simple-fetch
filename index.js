@@ -20,7 +20,7 @@ const fetch = function (url, options) {
         const status = parseInt(res[0]);
         const body = res[1];
         return {
-            ok: statusCode >= 200 && statusCode <= 300,
+            ok: status >= 200 && status < 300,
             status: status,
             json: ()=> {
                 return new Promise((resolve, reject)=> {
@@ -28,14 +28,12 @@ const fetch = function (url, options) {
                         let obj = JSON.parse(body);
                         resolve(obj);
                     } catch (e) {
-                        if (typeof body === 'string') {
-                            resolve(body);
-                        }
-                        else {
-                            reject(e);
-                        }
+                        reject(e);
                     }
                 });
+            },
+            text: ()=> {
+                return Promise.resolve(body);
             }
         };
     });
