@@ -19,6 +19,10 @@ RCT_EXPORT_MODULE();
     return self;
 }
 
+- (dispatch_queue_t)methodQueue
+{
+    return dispatch_queue_create("io.liaoyuan.React.SimpleFetchQueue", DISPATCH_QUEUE_SERIAL);
+}
 
 RCT_EXPORT_METHOD(sendRequest:(NSDictionary *)options resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
     
