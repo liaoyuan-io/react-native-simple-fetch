@@ -12,8 +12,10 @@ const fetch = function (url, options) {
         method: options.method ? options.method.toUpperCase() : 'GET',
         headers: options.headers,
         timeout: 10000,
-        body: options.body
+        body: options.body,
+        gzipRequest: true
     };
+
     console.log(params);
     return NativeSimpleFetch.sendRequest(params).then((res)=> {
         console.log(res);

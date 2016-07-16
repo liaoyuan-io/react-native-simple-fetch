@@ -10,6 +10,7 @@
 #import "RCTBridgeModule.h"
 #import "RCTConvert.h"
 #import "RCTLog.h"
+#import "RCTUtils.h"
 
 
 @interface RCTSimpleFetch : NSObject <RCTBridgeModule>

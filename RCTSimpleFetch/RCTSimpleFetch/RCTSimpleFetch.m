@@ -24,11 +24,20 @@ RCT_EXPORT_METHOD(sendRequest:(NSDictionary *)options resolver:(RCTPromiseResolv
     
     NSURL *url = [RCTConvert NSURL:options[@"url"]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    BOOL gzipRequest = [RCTConvert BOOL:options[@"gzipRequest"]];
     
     request.HTTPMethod = [RCTConvert NSString:options[@"method"]];
     request.allHTTPHeaderFields = [RCTConvert NSDictionary:options[@"headers"]];
     request.timeoutInterval = [RCTConvert NSTimeInterval:options[@"timeout"]];
-    [request setHTTPBody:[[RCTConvert NSString:options[@"body"]] dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setValue:@"gzip,deflate,sdch" forHTTPHeaderField:@"Accept-Encoding"];
+    
+    NSString *body = [[RCTConvert NSString:options[@"body"]] dataUsingEncoding:NSUTF8StringEncoding];
+    if(gzipRequest) {
+        request.HTTPBody = RCTGzipData(body, -1);
+        [request setValue:@"gzip" forHTTPHeaderField:@"Content-Encoding"];
+    } else {
+        request.HTTPBody = body;
+    }
     [request setValue:(@(request.HTTPBody.length)).description forHTTPHeaderField:@"Content-Length"];
     
     [[self.defaultSession
