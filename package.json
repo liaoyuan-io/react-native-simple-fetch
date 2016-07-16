@@ -1,0 +1,19 @@
+{
+  "name": "react-native-simple-fetch",
+  "version": "0.1.0",
+  "description": "A simpler implementation of `fetch` for React Native.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liaoyuan-io/react-native-simple-fetch.git"
+  },
+  "author": "Tong Shen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liaoyuan-io/react-native-simple-fetch/issues"
+  },
+  "homepage": "https://github.com/liaoyuan-io/react-native-simple-fetch#readme"
+}

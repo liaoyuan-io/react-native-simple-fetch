@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "28C87FEC655690E94CED04749A206F47F81C9998",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "28C87FEC655690E94CED04749A206F47F81C9998" : 0,
+    "44F0E05B0BECD241C81E466AB1EACA9DE116246F" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "70AE5A3E-95F4-4742-BEAD-3EC299B0DC95",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "28C87FEC655690E94CED04749A206F47F81C9998" : "react-native-simple-fetch\/",
+    "44F0E05B0BECD241C81E466AB1EACA9DE116246F" : "liaoyuan-app\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RCTSimpleFetch",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RCTSimpleFetch\/RCTSimpleFetch.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/liaoyuan-io\/react-native-simple-fetch.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "28C87FEC655690E94CED04749A206F47F81C9998"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:liaoyuan-io\/liaoyuan-app.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "44F0E05B0BECD241C81E466AB1EACA9DE116246F"
+    }
+  ]
+}
